@@ -1,0 +1,310 @@
+/* Paleta de Cores Inspirada em Marcas Clínicas Modernas (Manual/Hims) */
+:root {
+    --bg-site: #fcfbfa;       /* Off-white confortável para leitura */
+    --texto-principal: #1e2229; /* Grafite escuro elegante */
+    --texto-suave: #5c6475;     /* Cinza clínico para subtextos */
+    --cor-cta: #111827;         /* Preto institucional para alto contraste */
+    --cor-cta-hover: #374151;
+    --cor-destaque: #0f766e;    /* Verde-esmeralda escuro para pontos focais */
+    --borda-fina: #e5e7eb;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-site);
+    color: var(--texto-principal);
+    line-height: 1.5;
+    padding-top: 60px; /* Desconto do menu fixo */
+    padding-bottom: 80px; /* Desconto do botão flutuante */
+}
+
+/* NAVBAR SUPERIOR */
+.nav-topo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #fff;
+    border-bottom: 1px solid var(--borda-fina);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 600px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.logo strong { color: var(--cor-destaque); }
+
+.badge-clinico {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--cor-destaque);
+    background-color: #f0fdfa;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+/* CONTAINER CENTRAL */
+.container {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 24px 20px;
+}
+
+/* HERO */
+.hero-manual {
+    text-align: center;
+    padding: 20px 0 35px;
+}
+
+.rating-box {
+    margin-bottom: 12px;
+}
+
+.estrelas {
+    color: #f59e0b; /* Amarelo ouro */
+    font-size: 0.9rem;
+    margin-right: 6px;
+}
+
+.rating-texto {
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+}
+
+.subheadline {
+    font-size: 1rem;
+    color: var(--texto-suave);
+    margin-bottom: 28px;
+}
+
+/* BOTOES */
+.btn-cta {
+    width: 100%;
+    background-color: var(--cor-cta);
+    color: #fff;
+    border: none;
+    padding: 18px 24px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+
+.btn-cta:active {
+    background-color: var(--cor-cta-hover);
+}
+
+.info-entrega {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: var(--texto-suave);
+    margin-top: 15px;
+}
+
+.info-entrega svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--texto-suave);
+}
+
+/* BLOCOS DE DADOS */
+.secao-dados {
+    background-color: #fff;
+    border: 1px solid var(--borda-fina);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 35px;
+}
+
+.dado-bloco {
+    text-align: center;
+}
+
+.dado-numero {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--cor-destaque);
+    display: block;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.dado-texto {
+    font-size: 0.9rem;
+    color: var(--texto-principal);
+}
+
+/* LISTA PASSO A PASSO */
+.como-funciona h2, .evolucoes h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: -0.3px;
+}
+
+.passo-linha {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.passo-ponto {
+    background-color: #f3f4f6;
+    color: var(--texto-principal);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.passo-conteudo h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.passo-conteudo p {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+}
+
+/* EVOLUÇÕES / PROVA SOCIAL */
+.grid-evolucoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.card-evolucao {
+    background-color: #fff;
+    border: 1px solid var(--borda-fina);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.imagem-fake {
+    height: 150px;
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: var(--texto-suave);
+    text-align: center;
+    padding: 10px;
+    font-weight: 500;
+}
+
+/* CHECKOUT BOX */
+.checkout-box {
+    background-color: #fff;
+    border: 1px solid var(--cor-destaque);
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 4px 20px rgba(15, 118, 110, 0.05);
+}
+
+.tag-desconto {
+    display: inline-block;
+    background-color: #fef2f2;
+    color: #ef4444;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.preco-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.preco-antigo {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+    text-decoration: line-through;
+}
+
+.preco-atual {
+    font-size: 1.6rem;
+    color: var(--texto-principal);
+}
+
+.preco-atual strong {
+    color: var(--cor-destaque);
+    font-size: 2rem;
+}
+
+.preco-vista {
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+}
+
+.seguranca-garantia {
+    margin-top: 20px;
+    border-top: 1px solid var(--borda-fina);
+    padding-top: 15px;
+    font-size: 0.8rem;
+    color: var(--texto-suave);
+    text-align: left;
+}
+
+/* BARRA FIXA MOBILE */
+.footer-fixo {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-top: 1px solid var(--borda-fina);
+    padding: 10px 20px;
+    z-index: 999;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.05);
+    display: none;
+}
