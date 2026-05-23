@@ -47,6 +47,8 @@ body {
 }
 
 .logo {
+    margin:0 auto;
+    text-align: center;
     font-size: 0.9rem;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -307,4 +309,153 @@ h1 {
     z-index: 999;
     box-shadow: 0 -4px 15px rgba(0,0,0,0.05);
     display: none;
+}
+
+
+/* --- NOVOS ESTILOS PARA A HERO ULTRA PERSUASIVA --- */
+
+.alerta-vagas {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #fef2f2;
+    border: 1px solid #fee2e2;
+    color: #991b1b;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+/* Bolinha piscando em vermelho para prender a atenção */
+.ponto-pulsante {
+    width: 8px;
+    height: 8px;
+    background-color: #ef4444;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+    animation: pulsar-status 1.6s infinite;
+}
+
+@keyframes pulsar-status {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+/* Ajuste de peso do título principal */
+.hero-manual h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.15;
+    margin-bottom: 12px;
+}
+
+/* Lista de benefícios expressa */
+.caixa-beneficios-express {
+    background-color: #fff;
+    border: 1px solid var(--borda-fina);
+    border-radius: 8px;
+    padding: 14px;
+    margin-bottom: 22px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.beneficio-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.beneficio-item svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/* Efeito de pulsação suave no botão principal para guiar o clique */
+.ANIMA-PULSAR {
+    animation: pulsar-botao 2s infinite;
+}
+
+@keyframes pulsar-botao {
+    0% { transform: scale(1); box-shadow: 0 4px 10px rgba(17, 24, 39, 0.15); }
+    50% { transform: scale(1.02); box-shadow: 0 10px 20px rgba(17, 24, 39, 0.25); }
+    100% { transform: scale(1); box-shadow: 0 4px 10px rgba(17, 24, 39, 0.15); }
+}
+
+/* --- ESTILOS DO ANTES E DEPOIS NA PRIMEIRA DOBRA --- */
+
+.transformacao-hero {
+    background-color: #fff;
+    border: 1px solid var(--borda-fina);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.foto-antes-depois {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.col-foto {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--borda-fina);
+}
+
+.placeholder-img-hero {
+    width: 100%;
+    height: 130px;
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: var(--texto-suave);
+    font-weight: 500;
+    text-align: center;
+    padding: 10px;
+}
+
+img{
+    width: 100%;
+}
+
+.label-foto {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+
+.destaque-label {
+    background-color: var(--cor-destaque);
+}
+
+.legenda-hero {
+    font-size: 0.75rem;
+    color: var(--texto-suave);
+    margin-top: 8px;
+    font-style: italic;
+    text-align: center;
 }
