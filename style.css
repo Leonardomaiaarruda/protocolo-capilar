@@ -417,8 +417,7 @@ body {
 
 /* Correção para garantir que as imagens reais fiquem perfeitamente centralizadas e cortadas no contêiner */
 .placeholder-img-hero img {
-    width: 100%;
-    height: 100%;
+    height: 180px;
     object-fit: cover; 
     display: block;
 }
