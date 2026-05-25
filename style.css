@@ -408,18 +408,19 @@ body {
 }
 
 .placeholder-img-hero {
-    height: 130px;
-    background-color: #f3f4f6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 130px;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-/* Correção para garantir que as imagens reais fiquem perfeitamente centralizadas e cortadas no contêiner */
 .placeholder-img-hero img {
-    height: 180px;
-    object-fit: cover; 
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 
@@ -447,4 +448,53 @@ body {
     margin-top: 8px;
     font-style: italic;
     text-align: center;
+}
+
+.dores,
+.metodo,
+.autoridade,
+.bonus,
+.faq,
+.fechamento{
+
+margin-top:50px;
+
+}
+
+.dor,
+.fase,
+.card,
+.bonus div,
+.faq-item{
+
+background:white;
+
+padding:18px;
+
+margin-bottom:12px;
+
+border-radius:12px;
+
+border:1px solid #e5e7eb;
+
+}
+
+.stack{
+
+display:flex;
+
+flex-direction:column;
+
+gap:8px;
+
+margin:20px 0;
+
+}
+
+.fechamento{
+
+text-align:center;
+
+padding:40px 0;
+
 }
